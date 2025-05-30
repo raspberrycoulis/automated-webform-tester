@@ -11,6 +11,9 @@ This Python script automates the testing of a webform that includes a Google reC
 - Detects submission status via URL pattern
 - Sends a Microsoft Teams webhook alert on failure
 
+> [!IMPORTANT]
+> This is still a proof-of-concept and very much a work in progress. Installation and usage steps may need tweaking!
+
 ---
 
 ## Requirements

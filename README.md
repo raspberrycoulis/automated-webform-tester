@@ -61,6 +61,22 @@ This will launch a browser window, simulate a user completing the form and then 
 
 ❌ Failure: URL will contain `?data={"error":"Token did not pass Google reCAPTCHA verification."}`
 
+## Headless or not
+
+By default, the code runs with a browser opening and the actions being carried out on the screen automatically. However, the test can be run headless by changing [line 212](https://github.com/raspberrycoulis/automated-webform-tester/blob/398841a9da003e22908d87e9e99db00b4bb79773/automated-webform-tester.py#L212) from:
+
+```python
+        browser = p.chromium.launch(headless=False)
+```
+
+To:
+
+```python
+        browser = p.chromium.launch(headless=True)
+```
+
+Please keep in mind that running in headless mode may have a negative impact on the Google reCAPTCHA check so submissions may fail more often this way.
+
 
 ## Notes
 * This script is intended for internal testing of webform functionality and CAPTCHA handling.

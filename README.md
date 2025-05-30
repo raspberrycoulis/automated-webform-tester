@@ -57,9 +57,9 @@ This will launch a browser window, simulate a user completing the form and then 
 
 ### Submission detection
 
-✅ Success: URL will contain ?data={"sid":...}
+✅ Success: URL will contain `?data={"sid":...}`
 
-❌ Failure: URL will contain ?data={"error":"Token did not pass Google reCAPTCHA verification."}
+❌ Failure: URL will contain `?data={"error":"Token did not pass Google reCAPTCHA verification."}`
 
 
 ## Notes

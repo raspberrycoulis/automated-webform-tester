@@ -57,14 +57,14 @@ This will launch a browser window, simulate a user completing the form and then 
 
 ### Submission detection
 
-	•	✅ Success: URL will contain ?data={"sid":...}
-	•	❌ Failure: URL will contain ?data={"error":"Token did not pass Google reCAPTCHA verification."}
+✅ Success: URL will contain ?data={"sid":...}
+❌ Failure: URL will contain ?data={"error":"Token did not pass Google reCAPTCHA verification."}
 
 
 ## Notes
-	•	This script is intended for internal testing of webform functionality and CAPTCHA handling.
-	•	It does not bypass or solve CAPTCHAs; it works only with reCAPTCHA v3 via token simulation.
-	•	Ensure you have appropriate permissions and usage rights when running against live environments.
+* This script is intended for internal testing of webform functionality and CAPTCHA handling.
+* It does not bypass or solve CAPTCHAs; it works only with reCAPTCHA v3 via token simulation.
+* Ensure you have appropriate permissions and usage rights when running against live environments.
 
 ⸻
 

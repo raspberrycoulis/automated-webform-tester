@@ -1,0 +1,58 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.cache/
+*.lock
+lost+found/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.idea/
+.vscode/
+.mypy_cache/
+.pytest_cache/
+.tox/
+.coverage
+coverage.xml
+htmlcov/
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# Playwright
+playwright-report/
+test-results/
+*.webm
+*.png
+*.mp4
+.tracing/
+
+# VS Code settings
+.vscode/

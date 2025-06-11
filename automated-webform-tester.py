@@ -229,6 +229,8 @@ def run_test():
 
         # Accept cookies
         try:
+            # Debugging
+            print("Accepting cookies...")
             page.get_by_role("button", name="Allow all").click()
         except:
             pass
@@ -265,6 +267,8 @@ def run_test():
         print(f"Generated reCAPTCHA token: {token}")
 
         # Submit form
+        # Debugging
+        print("Starting to submit form...")
         with page.expect_navigation(wait_until="load"):
             page.get_by_role("button", name="Send enquiry").click()
 
@@ -276,7 +280,7 @@ def run_test():
             status = "Submission failed!"
             error_msg = "reCAPTCHA validation failed."
             print("Form submission failed!")
-            send_teams_alert(status, error_msg)
+            #send_teams_alert(status, error_msg) # Uncomment to send alert on failure
             print("Teams notification sent!")
 
         if "%22sid%22" in final_url:

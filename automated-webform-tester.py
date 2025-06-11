@@ -215,7 +215,7 @@ def run_test():
     # Debugging
     print("Running Playwright...")
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=False,args=["--disable-blink-features=AutomationControlled"])
         context = browser.new_context(user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36")
         page = context.new_page()
         site_key = os.getenv("RECAPTCHA_SITE_KEY")

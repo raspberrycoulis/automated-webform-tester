@@ -193,6 +193,8 @@ def send_teams_alert(status, error_msg):
 
 
 def type_slowly(input_box, text):
+    # Debugging
+    print("Starting to type slowly...")
     input_box.click()
     for char in text:
         input_box.type(char)
@@ -200,6 +202,8 @@ def type_slowly(input_box, text):
 
 
 def move_mouse_randomly(page, times=5):
+    # Debugging
+    print("Moving mouse randomly...")
     for _ in range(times):
         x = random.randint(100, 800)
         y = random.randint(100, 600)
@@ -208,6 +212,8 @@ def move_mouse_randomly(page, times=5):
 
 
 def run_test():
+    # Debugging
+    print("Running Playwright...")
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
         context = browser.new_context(user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36")
@@ -241,6 +247,8 @@ def run_test():
         time.sleep(2)
 
         # Manually solve reCAPTCHA v3
+        # Debugging
+        print("Solving reCAPTCHA v3...")
         token = page.evaluate(
             f"""
             () => new Promise((resolve) => {{

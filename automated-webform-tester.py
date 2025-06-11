@@ -269,8 +269,12 @@ def run_test():
         # Submit form
         # Debugging
         print("Starting to submit form...")
-        with page.expect_navigation(wait_until="load"):
-            page.get_by_role("button", name="Send enquiry").click()
+        # Waits for the page to load first, then clicks the button.
+        #with page.expect_navigation(wait_until="load"):
+        #    page.get_by_role("button", name="Send enquiry").click()
+        
+        # Ditch the wait on load and see if this works.
+        page.get_by_role("button", name="Send enquiry").click()
 
         # Get and process final URL
         final_url = page.url
